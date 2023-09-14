@@ -1,8 +1,9 @@
+import PropTypes from "prop-types";
 import dollar from "../../assets/dollar-sign.svg";
 import book from "../../assets/book.svg";
 
 const Course = ({ course }) => {
-  const { id, img, course_name, course_description, price, credit } = course;
+  const { img, course_name, course_description, price, credit } = course;
 
   return (
     <div>
@@ -14,7 +15,7 @@ const Course = ({ course }) => {
         <p className="text-sec-text text-sm font-normal mt-3">{course_description}</p>
         <div className="flex justify-between items-center mt-4">
           <p className="flex gap-2">
-            <img className="-mt-1" src={dollar} alt="icon" />
+            <img src={dollar} alt="icon" />
             <span className="text-sec-text text-base font-medium">Price : {price}</span>
           </p>
           <p className="flex gap-2.5">
@@ -26,6 +27,10 @@ const Course = ({ course }) => {
       </div>
     </div>
   );
+};
+
+Course.propTypes = {
+    course: PropTypes.object.isRequired
 };
 
 export default Course;
