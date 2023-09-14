@@ -22,7 +22,7 @@ function App() {
     if (isExist) {
       Swal.fire({
         icon: "warning",
-        title: "You already registered this course !!!",
+        title: "You have already registered this course !!!",
         showClass: {
           popup: "animate__animated animate__fadeInDown",
         },
@@ -31,9 +31,6 @@ function App() {
         },
       });
     } else {
-      // adding course to the list
-      const newCourse = [...courseAdd, course];
-      setCourseAdd(newCourse);
       // total credit & price calculate
       courseAdd.forEach((course_des) => {
         credit = credit + course_des.credit;
@@ -41,9 +38,25 @@ function App() {
       });
       const remaining = 20 - credit;
 
-      setRemainingCredit(remaining);
-      setTotalCredit(credit);
-      setTotalPrice(price);
+      if (remaining < 0 || credit > 20) {
+        Swal.fire({
+          icon: "warning",
+          title: "You don't have enough credit hour to add this course !!!",
+          showClass: {
+            popup: "animate__animated animate__fadeInDown",
+          },
+          hideClass: {
+            popup: "animate__animated animate__fadeOutUp",
+          },
+        });
+      } else {
+        // adding course to the list & update calculation
+        const newCourse = [...courseAdd, course];
+        setCourseAdd(newCourse);
+        setRemainingCredit(remaining);
+        setTotalCredit(credit);
+        setTotalPrice(price);
+      }
     }
   };
 
