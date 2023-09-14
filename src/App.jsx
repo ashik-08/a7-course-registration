@@ -1,15 +1,31 @@
-import { useState } from 'react'
-import './App.css'
-import Courses from './components/Courses/Courses'
-import Calculation from './components/Calculation/Calculation'
+import { useState } from 'react';
+import './App.css';
+import Courses from './components/Courses/Courses';
+import Calculation from './components/Calculation/Calculation';
+import Swal from 'sweetalert2';
+import 'animate.css';
 
 function App() {
   const [courseAdd, setCourseAdd] = useState([]);
 
   const handleCourseAdd = (course) => {
-    const newCourse = [...courseAdd, course];
+    const isExist = courseAdd.find(item => item.id === course.id);
+    if (isExist) {
+      Swal.fire({
+        icon: 'warning',
+        title: 'You already registered this course !!!',
+        showClass: {
+          popup: 'animate__animated animate__fadeInDown'
+        },
+        hideClass: {
+          popup: 'animate__animated animate__fadeOutUp'
+        }
+      })
+    } else {
+      const newCourse = [...courseAdd, course];
     setCourseAdd(newCourse);
-
+    }
+    
   }
 
   return (
