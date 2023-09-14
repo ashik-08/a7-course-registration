@@ -1,7 +1,8 @@
+import PropTypes from "prop-types";
 import { useState, useEffect } from "react";
 import Course from "../Course/Course";
 
-const Courses = () => {
+const Courses = ({ handleCourseAdd }) => {
     const [courses, setCourses] = useState([]);
 
     useEffect( () => {
@@ -16,11 +17,16 @@ const Courses = () => {
                 courses.map(course => 
                 <Course 
                 key={course.id}
-                course={course}>
+                course={course}
+                handleCourseAdd={handleCourseAdd}>
                 </Course>)
             }
         </div>
     );
+};
+
+Courses.propTypes = {
+    handleCourseAdd: PropTypes.func.isRequired
 };
 
 export default Courses;

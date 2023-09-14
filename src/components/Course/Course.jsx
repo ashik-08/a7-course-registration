@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import dollar from "../../assets/dollar-sign.svg";
 import book from "../../assets/book.svg";
 
-const Course = ({ course }) => {
+const Course = ({ course, handleCourseAdd }) => {
   const { img, course_name, course_description, price, credit } = course;
 
   return (
@@ -23,14 +23,15 @@ const Course = ({ course }) => {
             <span className="text-sec-text text-base font-medium">Credit : {credit}hr</span>
           </p>
         </div>
-        <button className="bg-spe-text text-white text-lg font-semibold py-2 w-full rounded-lg mt-6">Select</button>
+        <button onClick={() => handleCourseAdd(course)} className="bg-spe-text text-white text-lg font-semibold py-2 w-full rounded-lg mt-6">Select</button>
       </div>
     </div>
   );
 };
 
 Course.propTypes = {
-    course: PropTypes.object.isRequired
+    course: PropTypes.object.isRequired,
+    handleCourseAdd: PropTypes.func.isRequired
 };
 
 export default Course;
