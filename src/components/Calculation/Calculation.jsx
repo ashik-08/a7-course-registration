@@ -11,7 +11,7 @@ const Calculation = ({ courseAdd }) => {
       <div className="text-sec-text text-base font-normal my-6 space-y-2.5">
         {courseAdd.map((item, idx) => (
           <p key={idx}>
-            {idx+1} {item.course_name}
+            {idx + 1} {item.course_name}
           </p>
         ))}
       </div>
