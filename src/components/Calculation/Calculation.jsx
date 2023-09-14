@@ -1,10 +1,15 @@
 import PropTypes from "prop-types";
 
-const Calculation = ({ courseAdd }) => {
+const Calculation = ({
+  courseAdd,
+  remainingCredit,
+  totalCredit,
+  totalPrice,
+}) => {
   return (
     <div className="md:w-1/4 bg-white h-fit rounded-xl p-6 mt-8">
       <h1 className="text-spe-text text-lg font-bold mb-4">
-        Credit Hour Remaining 7 hr
+        Credit Hour Remaining {remainingCredit} hr
       </h1>
       <hr />
       <h1 className="text-pri-text text-xl font-bold mt-4">Course Name</h1>
@@ -17,11 +22,11 @@ const Calculation = ({ courseAdd }) => {
       </div>
       <hr />
       <h1 className="text-cal-text text-base font-medium my-4">
-        Total Credit Hour : 13
+        Total Credit Hour : {totalCredit}
       </h1>
       <hr />
       <h1 className="text-cal-text text-base font-semibold mt-4">
-        Total Price : 48000 USD
+        Total Price : {totalPrice} USD
       </h1>
     </div>
   );
@@ -29,6 +34,9 @@ const Calculation = ({ courseAdd }) => {
 
 Calculation.propTypes = {
   courseAdd: PropTypes.array,
+  remainingCredit: PropTypes.number,
+  totalCredit: PropTypes.number,
+  totalPrice: PropTypes.number,
 };
 
 export default Calculation;

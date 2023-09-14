@@ -7,8 +7,8 @@ import "animate.css";
 
 function App() {
   const [courseAdd, setCourseAdd] = useState([]);
-  const [totalCredit, setTotalCredit] = useState(0);
   const [remainingCredit, setRemainingCredit] = useState(20);
+  const [totalCredit, setTotalCredit] = useState(0);
   const [totalPrice, setTotalPrice] = useState(0);
 
   const handleCourseAdd = (course) => {
@@ -34,11 +34,16 @@ function App() {
       // adding course to the list
       const newCourse = [...courseAdd, course];
       setCourseAdd(newCourse);
-      // total credit calculate
+      // total credit & price calculate
       courseAdd.forEach((course_des) => {
         credit = credit + course_des.credit;
         price = price + course_des.price;
       });
+      const remaining = 20 - credit;
+
+      setRemainingCredit(remaining);
+      setTotalCredit(credit);
+      setTotalPrice(price);
     }
   };
 
@@ -49,7 +54,12 @@ function App() {
       </h1>
       <div className="md:flex gap-6">
         <Courses handleCourseAdd={handleCourseAdd}></Courses>
-        <Calculation courseAdd={courseAdd}></Calculation>
+        <Calculation
+          courseAdd={courseAdd}
+          remainingCredit={remainingCredit}
+          totalCredit={totalCredit}
+          totalPrice={totalPrice}
+        ></Calculation>
       </div>
     </>
   );
