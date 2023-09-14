@@ -1,0 +1,74 @@
+[
+    {
+      "id": 1,
+      "img": "https://i.ibb.co/hXtgtpX/Rectangle-2-2.png",
+      "course_name": "Introduction to C Programming",
+      "course_description": "Master the basics of C programming in this comprehensive course.",
+      "price": 15000,
+      "credit": 1
+    },
+    {
+      "id": 2,
+      "img": "https://i.ibb.co/xD5XN3H/Rectangle-2-3.png",
+      "course_name": "Introduction to Algorithms",
+      "course_description": "Explore foundational algorithms and problem solving in this course.",
+      "price": 25000,
+      "credit": 2
+    },
+    {
+      "id": 3,
+      "img": "https://i.ibb.co/dMG5YDr/Rectangle-2-4.png",
+      "course_name": "Introduction to C++ for DSA",
+      "course_description": "Learn core concepts for data structure and algorithms with C++.",
+      "price": 10000,
+      "credit": 10
+    },
+    {
+      "id": 4,
+      "img": "https://i.ibb.co/J5Wv0Qv/Rectangle-3.png",
+      "course_name": "Basic Data Structures",
+      "course_description": "Learn basic data structures for efficient programming and problem-solving.",
+      "price": 35000,
+      "credit": 5
+    },
+    {
+      "id": 5,
+      "img": "https://i.ibb.co/Nn9nKqg/Rectangle-2.png",
+      "course_name": "Introduction to OOP Python",
+      "course_description": "Create mobile application and software using Python's OOP principles.",
+      "price": 19000,
+      "credit": 7
+    },
+    {
+      "id": 6,
+      "img": "https://i.ibb.co/ZKCgw1M/Rectangle-2-5.png",
+      "course_name": "Software Engineering",
+      "course_description": "Dive into software engineering, machine learning, and artificial intelligence with Python.",
+      "price": 23000,
+      "credit": 3
+    },
+    {
+      "id": 7,
+      "img": "https://i.ibb.co/8xCb1Kg/Rectangle-3-1.png",
+      "course_name": "AWS, Cloud Computing",
+      "course_description": "Master digital marketing, cloud computing, and AWS for a successful tech career.",
+      "price": 12000,
+      "credit": 4
+    },
+    {
+      "id": 8,
+      "img": "https://i.ibb.co/rHYbLS9/Rectangle-2-1.png",
+      "course_name": "Database (MySQL)",
+      "course_description": "Learn MySQL for effective database management, integration and business finance.",
+      "price": 7000,
+      "credit": 6
+    },
+    {
+      "id": 9,
+      "img": "https://i.ibb.co/NS23Pcn/Rectangle-2-6.png",
+      "course_name": "Problem-Solving Part",
+      "course_description": "Enhance your creative writing and problem-solving skills in this engaging workshop.",
+      "price": 15000,
+      "credit": 3
+    }
+]
