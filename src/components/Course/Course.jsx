@@ -3,12 +3,12 @@ import dollar from "../../assets/dollar-sign.svg";
 import book from "../../assets/book.svg";
 
 const Course = ({ course, handleCourseAdd }) => {
-  const { img, course_name, course_description, price, credit } = course;
+  const { id, img, course_name, course_description, price, credit } = course;
 
   return (
-    <div className="bg-white p-4 rounded-xl">
+    <div className={id === 9 ? "bg-white p-4 rounded-xl relative md:left-[53.5%] xl:left-0" : "bg-white p-4 rounded-xl"}>
       <figure>
-        <img className="w-full" src={img} alt="{course_name} cover image" />
+        <img className="w-full" src={img} alt={`${course_name} cover-img`} />
       </figure>
       <h4 className="text-pri-text text-lg font-semibold mt-4">
         {course_name}
