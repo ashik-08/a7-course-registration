@@ -29,6 +29,26 @@ The Course Registration website provides a dashboard displaying various course d
 
 ## Project Features
 
+#### Dashboard
+- Displays various course details fetched from an API.
+
+#### Course Selection
+- Allows users to select and add courses to their cart.
+
+#### Credit Hour Limit
+- Restricts users from taking more than 20 credit hours.
+
+#### Animated Alert
+- An animated alert is displayed if a user attempts to exceed the credit hour limit.
+
+#### Course Duplication Prevention
+- System prevents users from adding the same course twice.
+
+#### Responsive Design
+- Optimized for a seamless experience on various devices.
+
+#### Others
+
 - Unique JSON data
 
 - Tailwind CSS styling
